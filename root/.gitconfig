@@ -1,7 +1,7 @@
 [user]
 	name = Robert Griffin
 	email = robert.griffin0908@gmail.com
-	signingkey = 5E5813FCC01F6B0E
+	signingkey = 1B5C0FBC0E9DE638
 [commit]
 	gpgsign = true
 [gpg]

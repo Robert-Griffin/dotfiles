@@ -73,7 +73,15 @@ export FPATH="${HOMEBREW_PREFIX}/share/zsh/site-functions:${FPATH}"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf wd)
+plugins=(git wd vi-mode fzf)
+
+# Settings for vi-mode plugin
+export VI_MODE_SET_CURSOR=true
+export VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+export MODE_INDICATOR="%F{white}+%f"
+export INSERT_MODE_INDICATOR="%F{yellow}+%f"
+
+
 
 source $ZSH/oh-my-zsh.sh
 

@@ -51,7 +51,7 @@ yabai -m config mouse_action2 resize
 # use yabai to get all windows and then display them as a list in alfred
 # yabai -m query --windows --window | jq -re 'if .app == "iTerm2" then .id else empty end' | xargs -I{} yabai -m window {} --insert east
 
-borders active_color=0xffff0000 inactive_color=0xff494d64 width=12.0 2>/dev/null 1>&2 &
+# borders active_color=0xffff0000 inactive_color=0xff494d64 width=12.0 2>/dev/null 1>&2 &
 
 echo "yabai configuration loaded.."
 
@@ -61,4 +61,14 @@ echo "yabai configuration loaded.."
 # make sticky
 # yabai -m window --toggle sticky
 
-yabai -m config window_float 1
+# Make all windows floating by default 
+# yabai -m config default_border off
+
+# yabai -m config window_float on
+yabai -m rule --add app="." manage=off
+yabai -m rule --add app="^iTerm2$" manage=on
+yabai -m rule --add app="^Google Chrome$" manage=on
+
+
+# yabai -m config layout default float
+

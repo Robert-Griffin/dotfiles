@@ -14,33 +14,33 @@ set backspace=indent,eol,start " allow backspace when no text entered in insert 
 set wildmenu
 syntax enable
 set scrolloff=5    " Try to keep at least 5 lines on the screen
+set rtp+=~/.vim/bundle/Vundle.vim	" set the runtime path to include Vundle and initialize
+filetype off
 
 let g:solarized_termcolors=256
 let mapleader = "," " map <Leader> to ,
 
 " Vundle
-filetype off
-call plug#begin('~/.vim/bundle')
-Plug 'junegunn/fzf', { 'dir': '~/.vim/bundle/fzf', 'do': './install --all' }
-Plug 'gmarik/vundle'
-Plug 'altercation/vim-colors-solarized'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/localvimrc'
-Plug 'Raimondi/delimitMate'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.eruby'] }
-Plug 'jelera/vim-javascript-syntax'
-Plug 'roman/golden-ratio'
-Plug 'junegunn/vim-easy-align'
-Plug 'roman/golden-ratio'
-Plug 'airblade/vim-gitgutter'
-call plug#end()
+call vundle#begin()
+Plugin 'junegunn/fzf', { 'dir': '~/.vim/bundle/fzf', 'do': './install --all' }
+Plugin 'gmarik/vundle'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/localvimrc'
+Plugin 'Raimondi/delimitMate'
+Plugin 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.eruby'] }
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'roman/golden-ratio'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+call vundle#end()
 filetype plugin indent on
-
 colorscheme solarized
 
 " NERDTree
