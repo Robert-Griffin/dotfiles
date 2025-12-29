@@ -1,10 +1,10 @@
-oh-my-posh init pwsh --config "C:\Users\robertgriffin\scoop\apps\oh-my-posh\current\themes\powerlevel10k_lean.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:USERPROFILE\scoop\apps\oh-my-posh\current\themes\powerlevel10k_lean.omp.json" | Invoke-Expression
 
 
 Import-Module -Name Terminal-Icons
 Import-Module posh-git
 Import-Module -Name PSReadLine
-Import-Module C:\Users\RobertGriffin\scoop\modules\posh-git\posh-git.psd1
+Import-Module "$env:USERPROFILE\scoop\modules\posh-git\posh-git.psd1"
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
