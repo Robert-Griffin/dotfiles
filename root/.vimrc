@@ -39,6 +39,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'roman/golden-ratio'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
+Plugin 'laktak/tome'
 call vundle#end()
 filetype plugin indent on
 colorscheme solarized

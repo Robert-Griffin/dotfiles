@@ -47,7 +47,7 @@ function forEachInDirectory(rootPath, currentEntryPath, callback) {
         replaced,
         replaceUnderscoreWithDot(entry.name)
       );
-      callback(path.join(path.resolve(entry.path), entry.name), wholePath);
+      callback(path.join(path.resolve(entry.parentPath), entry.name), wholePath);
     }
 
     if (entry.isDirectory()) {
