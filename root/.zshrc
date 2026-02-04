@@ -73,7 +73,11 @@ export FPATH="${HOMEBREW_PREFIX}/share/zsh/site-functions:${FPATH}"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git wd vi-mode fzf)
+plugins=(git wd vi-mode fzf z)
+
+# Settings for fzf
+
+export FZF_BASE=/opt/homebrew/opt/fzf
 
 # Settings for vi-mode plugin
 export VI_MODE_SET_CURSOR=true
@@ -96,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -124,3 +128,5 @@ if [ -f '/Users/robertgriffin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then .
 if [ -f '/Users/robertgriffin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robertgriffin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(direnv hook zsh)"
+export PATH="$HOME/.local/bin:$PATH"
+
